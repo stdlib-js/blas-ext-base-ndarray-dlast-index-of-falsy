@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2026 The Stdlib Authors.
@@ -16,20 +16,11 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
 
-// MODULES //
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@main/index.d.ts"/>
 
-var ndarraylike2scalar = require( '@stdlib/ndarray-base-ndarraylike2scalar' );
-var numelDimension = require( '@stdlib/ndarray-base-numel-dimension' );
-var getStride = require( '@stdlib/ndarray-base-stride' );
-var getOffset = require( '@stdlib/ndarray-base-offset' );
-var getData = require( '@stdlib/ndarray-base-data-buffer' );
-var clipIndex = require( '@stdlib/ndarray-base-clip-index' );
-var strided = require( '@stdlib/blas-ext-base-dlast-index-of-falsy' ).ndarray;
-
-
-// MAIN //
+import { float64ndarray, typedndarray } from '@stdlib/types/ndarray';
 
 /**
 * Returns the index of the last falsy element in a one-dimensional double-precision floating-point ndarray.
@@ -41,8 +32,8 @@ var strided = require( '@stdlib/blas-ext-base-dlast-index-of-falsy' ).ndarray;
 *     -   a one-dimensional input ndarray.
 *     -   a zero-dimensional ndarray containing the index from which to begin searching.
 *
-* @param {ArrayLikeObject<Object>} arrays - array-like object containing ndarrays
-* @returns {integer} index
+* @param arrays - array-like object containing ndarrays
+* @returns index
 *
 * @example
 * var Float64Vector = require( '@stdlib/ndarray-vector-float64' );
@@ -57,23 +48,9 @@ var strided = require( '@stdlib/blas-ext-base-dlast-index-of-falsy' ).ndarray;
 * var v = dlastIndexOfFalsy( [ x, fromIndex ] );
 * // returns 3
 */
-function dlastIndexOfFalsy( arrays ) {
-	var fromIndex;
-	var N;
-	var x;
-
-	x = arrays[ 0 ];
-	fromIndex = ndarraylike2scalar( arrays[ 1 ] );
-
-	N = numelDimension( x, 0 );
-	fromIndex = clipIndex( fromIndex, N );
-	if ( fromIndex >= N ) {
-		fromIndex = N - 1;
-	}
-	return strided( fromIndex+1, getData( x ), getStride( x, 0 ), getOffset( x ) );
-}
+declare function dlastIndexOfFalsy( arrays: [ float64ndarray, typedndarray<number> ] ): number;
 
 
 // EXPORTS //
 
-module.exports = dlastIndexOfFalsy;
+export = dlastIndexOfFalsy;
