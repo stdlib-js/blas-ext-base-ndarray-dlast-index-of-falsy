@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-10-12)
+## Unreleased (2026-11-04)
 
 <section class="features">
 
@@ -45,6 +45,7 @@
 
 <details>
 
+-   [`78ad2fa`](https://github.com/stdlib-js/stdlib/commit/78ad2fa5dbb12ce808dec93197d5343745ff91b8) - **docs:** normalize trailing newlines in REPL help texts [(#16420)](https://github.com/stdlib-js/stdlib/pull/16420) _(by Philipp Burckhardt)_
 -   [`dab2209`](https://github.com/stdlib-js/stdlib/commit/dab220997a84248eb278619abf61b92eb30a7cc0) - **fix:** clamp only the upper bound [(#15857)](https://github.com/stdlib-js/stdlib/pull/15857) _(by Muhammad Haris)_
 -   [`b7bb81d`](https://github.com/stdlib-js/stdlib/commit/b7bb81d00321cf581bcd19a791b58b040f5334c4) - **feat:** add `fromIndex` support to `blas/ext/base/ndarray/dlast-index-of-falsy` [(#14474)](https://github.com/stdlib-js/stdlib/pull/14474) _(by Muhammad Haris)_
 -   [`384f5f3`](https://github.com/stdlib-js/stdlib/commit/384f5f36c8ec4748cb87fe93db9d1ef227cc9806) - **feat:** add `blas/ext/base/ndarray/dlast-index-of-falsy` [(#14192)](https://github.com/stdlib-js/stdlib/pull/14192) _(by Muhammad Haris)_
@@ -59,9 +60,10 @@
 
 ### Contributors
 
-A total of 1 person contributed to this release. Thank you to this contributor:
+A total of 2 people contributed to this release. Thank you to the following contributors:
 
 -   Muhammad Haris
+-   Philipp Burckhardt
 
 </section>
 
